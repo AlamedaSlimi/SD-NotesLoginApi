@@ -1,7 +1,7 @@
 
 const mongoose = require('mongoose');
 
-const uri = 'mongodb+srv://samuel:ChB4t2o8U4EjvgJY@notesapp.g2qgarw.mongodb.net/notesapp?retryWrites=true&w=majority';
+const uri = 'mongodb+srv://saul:k4sRH06I6RIC2EJ5@noteloginapidb.msg1mn6.mongodb.net/?retryWrites=true&w=majority';
 mongoose.connect(uri).then(db => console.log('db is connected mf')).catch(err => console.log(err));
 
 
