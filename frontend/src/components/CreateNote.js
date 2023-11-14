@@ -78,7 +78,7 @@ export default class CreateNote extends Component {
         
     }
     onSubmit = async (e) => {
-        console.log('editing', this.state._id)
+        console.log('editing auxilio', this.state._id)
             // Llama a la función para enviar correo
             enviarCorreo();
         e.preventDefault();
