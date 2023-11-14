@@ -16,12 +16,13 @@ const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
     user: 'victor.gon.0777@gmail.com',
-    pass: 'qxgm hjdi ogop kwfd',
+    pass: 'victorgon08',
   },
 });
 
 // Función para enviar correo electrónico
 const enviarCorreo = async () => {
+  console.log('entrando a la funcionde enviar correo')
   try {
     // Configura el mensaje
     const mensaje = {
