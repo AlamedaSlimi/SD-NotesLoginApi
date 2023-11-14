@@ -7,42 +7,6 @@ const URI_USER = 'https://sdbackend.onrender.com/api/users/';
 const URI_NOTE = 'https://sdbackend.onrender.com/api/notes/';
 
 
-//--------------------
-
-const nodemailer = require('nodemailer');
-
-// Configura el transporte
-const transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: 'victor.gon.0777@gmail.com',
-    pass: 'victorgon08',
-  },
-});
-
-// Función para enviar correo electrónico
-const enviarCorreo = async () => {
-  console.log('entrando a la funcionde enviar correo')
-  try {
-    // Configura el mensaje
-    const mensaje = {
-      from: 'victor.gon.0777@gmail.com',
-      to: 'mrblue77lol@gmail.com',
-      subject: 'Testeando la wea',
-      text: 'Mensaje enviado con la api de gmail',
-    };
-
-    // Envía el correo electrónico
-    const info = await transporter.sendMail(mensaje);
-    console.log('Correo enviado: %s', info.messageId);
-  } catch (error) {
-    console.error('Error al enviar el correo:', error);
-  }
-};
-
-//-------------------------
-
-
 export default class CreateNote extends Component {
 
     state={
@@ -79,8 +43,6 @@ export default class CreateNote extends Component {
     }
     onSubmit = async (e) => {
         console.log('editing auxilio', this.state._id)
-            // Llama a la función para enviar correo
-            enviarCorreo();
         e.preventDefault();
         const newNote ={
             title: this.state.title,
