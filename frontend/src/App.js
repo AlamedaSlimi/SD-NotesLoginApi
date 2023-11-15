@@ -33,7 +33,6 @@ function App() {
         }
       )
   }
-  
   return (
     <Router>
     <Navigation/>
@@ -44,12 +43,12 @@ function App() {
       <Route path="/user" component={CreateUser} />
       </div>
       <div className="App">
-           <div className="quote">
-              <h2>{quote}</h2>
-              <small>-{author}-</small>
-           </div><br />
-           <button className="btn" onClick={fetchNewQuote}>Generate New Quote</button>
-      </div>
+         <div className="quote">
+            <h2>{quote}</h2>
+            <small>-{author}-</small>
+         </div><br />
+         <button className="btn" onClick={fetchNewQuote}>Generate New Quote</button>
+    </div>
     </Router>
   );
 }
